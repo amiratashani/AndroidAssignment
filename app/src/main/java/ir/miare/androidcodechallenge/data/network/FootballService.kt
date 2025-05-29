@@ -1,11 +1,11 @@
 package ir.miare.androidcodechallenge.data.network
 
+import ir.logicbase.mockfit.Mock
+import ir.miare.androidcodechallenge.data.network.model.PlayersAndLeague
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 interface FootballService {
-    @GET("upcoming")
-    suspend fun getUpcomingMovies(
-        @Query("page") page: Int,
-    )
+    @Mock("data.json")
+    @GET("list")
+    suspend fun getData(): List<PlayersAndLeague>
 }

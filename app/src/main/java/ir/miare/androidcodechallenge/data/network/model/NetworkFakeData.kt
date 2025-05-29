@@ -1,12 +1,12 @@
-package ir.miare.androidcodechallenge
+package ir.miare.androidcodechallenge.data.network.model
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.io.Serializable
 
 
-data class FakeData(
-    @JsonProperty("league") var league: League,
-    @JsonProperty("players") var players: List<Player>
+data class PlayersAndLeague(
+    @JsonProperty("league") val league: League,
+    @JsonProperty("players") val players: List<Player>
 )
 
 data class League(
